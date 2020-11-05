@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+    <button disabled class="mx-4 my-4 disabled:opacity-25 bg-blue-500">
+        Submmit </button>
+-->
+    <h1>
+        Primera prueba
+    </h1>
+    <ul class="text-gray-500">
+        <li>Crea un botón que se adapte según el tamaño de dispositivo.</li>
+        <li>Cuando sea de tamaño pequeño, este botón debe abarcar
+            el ancho de la pantalla y cuando sea un poco más
+            grande debe tener un tamaño predeterminado.</li>
+
+    </ul>
+    <div class="flex-wrap mt-4 m-4">
+        <button class=" rounded bg-blue-500 text-blue-200  w-full sm:w-48">Boton pruebas</button>
+    </div>
+    <article>
+        Tip: Una buena práctica es utilizar el margen de cada elemento para posicionarlo con respecto a otros. Esto se
+        logra con margin left (ml-x), margin-top (mt-x). Si usamos margin right y margin bottom lo que hacemos es mover
+        otros elementos respecto del elemento con el que estamos trabajando.
+    </article>
+    <div class="text-gray-500">
+        <p class="mt-2">Crea lo que se conoce como group button de 3 buttons o más. Esto lo logras utilizando lo aprendido en
+            display o flexbox, así como margin y padding.</p>
+        <h1>Pseudo—Class Variants:
+            Utilizando variantes como hover y active, logra crear efectos cambiando el color de los botones creados
+            anteriormente.
+            Cuando pases el cursor encima de uno de los botones deberá cambiar el fondo a un color más oscuro, de tal
+            manera que resalte con el texto. Y al estar en estado normal, el fondo deberá ser claro y el texto, color
+            oscuro.
+        </h1>
+    </div>
+    <h1 class="font-bold text-center mt-2">Reto 2</h1>
+    <div class="flex flex-col md:flex-row md:justify-around m-10 mt-6">
+      <button class="btn bg-blue-300 md:w-1/4 active:btn-active">
+        ¡Toca aquí!
+      </button>
+      <button class="btn bg-red-300 md:w-1/4 active:btn-active">
+        ¡Toca allá!
+      </button>
+      <button class="btn bg-orange-300 md:w-1/4 active:btn-active">
+        ¡Toca lejos!
+      </button>
+    </div>
+  
+    <h1 class="font-bold text-center mt-2">Reto 3 🥉</h1>
+    <div class="flex flex-col md:items-center m-10 mt-6">
+      <button class="alert neutral md:w-3/4 active:btn-active">
+        Something neutral happened.
+      </button>
+      <button class="alert bad md:w-3/4 active:btn-active">
+        Something bad happened.
+      </button>
+      <button class="alert strange md:w-3/4 active:btn-active">
+        Something strange happened.
+      </button>
+      <button class="alert good md:w-3/4 active:btn-active">
+        Something good happened.
+      </button>
+      <button class="alert information md:w-3/4 active:btn-active">
+        This is information.
+      </button>
+    </div>
+</body>
+
+</html>

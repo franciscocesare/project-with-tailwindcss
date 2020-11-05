@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <title>Platzi Food</title>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+
+<body>
+    <nav x-data="{open: false}" class="fixed z-10 w-full   bg-secondary text-gray-200">
+        <!-- <header>  -->
+        <div class="px-2 h-18 bg-secondary text-white flex justify-between items-center">
+            <div><img class="h-8 py-1" src="images/logo-w.svg" alt=""></div>
+            <div class="text-2xl" @click="open=true">&equiv;</div>
+        </div>
+        <!--  </header>  -->
+        <div x-show="open" @click.away="open=false">
+            <div class="mt-1 mx-2">
+                <input class="form-control" type="search" placeholder="Búsqueda">
+            </div>
+            <div class="mx-2 py-1 md:flex justify-around">
+                <div class="flex">
+                    Precio:
+                    <div class="ml-2">$</div>
+                    <div class="ml-2 text-primary">$$</div>
+                    <div class="ml-2">$$$</div>
+                    <div class="ml-2">$$$$ </div>
+                </div>
+                <div class="flex ">
+                    <div class="">
+                        Calificación:
+                    </div>
+                    <div class="ml-2 text-primary">&starf; </div>
+                    <div class="ml-px text-primary">&starf; </div>
+                    <div class="ml-px text-primary">&starf; </div>
+                    <div class="ml-px text-primary">&starf; </div>
+                    <div class="ml-px">&star; </div>
+
+                </div>
+                <div>
+                    <button class="btn btn-primary">Filtrar</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="mb-8 ">
+        <div class=" h-56 md:bg-center md:h-100 bg-cover bg-no-repeat bg-bottom"
+            style="background-image: url('https://images.unsplash.com/photo-1587574293340-e0011c4e8ecf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=889&q=80');">
+        </div>
+        <div class="container mx-auto md:flex">
+            <div class="mx-2 mt-4 md:mx-0 md:w-1/2 md:flex md:bg-white rounded-lg">
+                <div>
+                    <img class="w-full md:w-48 md:h-full object-cover rounded-lg md:rounded-r-none"
+                        src="https://images.unsplash.com/photo-1542574271-7f3b92e6c821?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&h=500&q=80"
+                        alt="foto burger">
+                </div>
+                <div class="relative mx-2 p-2 rounded-lg md:shadow-none shadow-lg bg-white md:bg-transparent -mt-2">
+                    <h2 class="text-xl tracking-tight uppercase font-semibold  text-gray-800 md:text-lg">Hamburguesa
+                        con
+                        queso</h2>
+                    <p class="text-gray-500 leading-snug">Doble burger con queso, onion, lechuga y tomate
+                    </p>
+                    <div class="mt-2 text-sm font-semibold text-gray-700">$300.-</div>
+                    <div class="mt-2 text-xs text-yellow-600"> &starf;&starf;&starf;&starf;&star; /36 reseñas</div>
+                </div>
+            </div>
+                <div class="mx-2 mt-4 md:w-1/2 md:ml-2 md:mx-0 md:flex md:bg-white rounded-lg">
+                    <div>
+                        <img class="w-full md:w-48 md:h-full object-cover rounded-lg md:rounded-r-none"
+                            src="https://images.unsplash.com/photo-1542574271-7f3b92e6c821?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&h=500&q=80"
+                            alt="foto burger">
+                    </div>
+                    <div class="relative mx-2 p-2 rounded-lg md:shadow-none shadow-lg bg-white md:bg-transparent -mt-2">
+                        <h2 class="text-xl tracking-tight uppercase font-semibold  text-gray-800">Hamburguesa
+                            con
+                            queso</h2>
+                        <p class="text-gray-500 leading-snug">Doble burger con queso, onion, lechuga y tomate
+                        </p>
+                        <div class="mt-2 text-sm font-semibold text-gray-700">$300.-</div>
+                        <div class="mt-2 text-xs text-yellow-600"> &starf;&starf;&starf;&starf;&star; /36 reseñas</div>
+                    </div>
+                </div>
+            </div>
+           <div class="container mt-4 mx-2">
+            <h3 class="text-3xl text-center font-semibold text-gray-900 capitalize">Contact us</h3>
+            <form>
+
+                <label class="block text-lg text-gray-700" for="name">Name</label>
+                <input placeholder="What's your name?" class="form-control form-control: focus" type="text" id="name">
+
+                <label class="block text-lg text-gray-700" for="email">Email</label>
+                <input placeholder="What's your email address?" class="form-control form-control: focus" type="text"
+                    id="email">
+
+                <label class="block text-lg text-gray-700" for="comments">Comments</label>
+                <textarea placeholder="Write a comment" class="form-control form-control: focus  " name="comments"
+                    id="comments"></textarea>
+
+                <button class="btn btn-primary  mx-auto ">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <!--ABOSLUTE..es para que quede abajo, w-full TODA LA PANTALLA-->
+    <footer class="w-full text-white bg-secondary">
+        <div class="md: flex justify-around md:flex-row-reverse">
+            <div class="mt-4 ml-8">
+                <!--agregamos CDN de style, y fa fa "nombre" trae el logo-->
+                <div class="hover:text-primary"><i><i class="fa fa-facebook-official" aria-hidden="true"></i></i>
+                    PlatziFood</div>
+                <div class="hover:text-primary"><i><i class="fa fa-instagram" aria-hidden="true"></i></i> @PlatziFood
+                </div>
+                <div class="hover:text-primary"><i><i class="fa fa-twitter" aria-hidden="true"></i></i> @PlatziFood
+                </div>
+            </div>
+            <ul class="ml-8 mb-4 mt-4  md:list-disc">
+                <li>Soporte</li>
+                <li>Acerca de nosotros</li>
+                <li>Registro</li>
+                <li>Aviso de privacidad</li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>
